@@ -1,0 +1,37 @@
+{
+    "name": "bootstrap-api",
+    "version": "1.0.0",
+    "description": "Basic API example in DEK",
+    "author": "Andre Ferreira <andre@vigiadepreco.com.br>",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
+        "build": "babel src -s -D -d build --presets env",
+        "start": "node build"
+    },
+    "dependencies": {
+        "@dekproject/routes": "latest",
+        "@dekproject/scope": "latest",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "latest",
+        "mocha": "latest",
+        "babel-preset-minify": "latest",
+        "webpack": "latest",
+        "webpack-dev-server": "latest",
+        "babel-core": "latest",
+        "babel-loader": "latest",
+        "babel-preset-es2015": "latest"
+    },
+    "homepage": "https://github.com/dekproject/bootstrap-api.git",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dekproject/bootstrap-api.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dekproject/bootstrap-api.git/issues"
+    }
+}
