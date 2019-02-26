@@ -1,14 +1,11 @@
-# @dekproject/bootstrap
+# @dekproject/bootstrap-api
 
-DEK project base structure
+Basic API example in DEK
 
-What does the bootstrap do?
+What does the API bootstrap do?
 
-* Create a basic HTTP server with Express (https://www.npmjs.com/package/express)
-* Set up the Babel build environment (https://babeljs.io/)
-* Structure in ES6 build by Babel
-* Configures production environment using Docker and Docker-compose
-* Configuration control via dotenv (https://www.npmjs.com/package/dotenv)
+* Creates a server pointed to /api with some basic CRUD in Mongoose
+* Create documentation with the help of the Swagger module in /api/docs
 
 ## Instalation
 
@@ -19,33 +16,36 @@ $ npm i -g @dekproject/cli
 $ dek init
 ```
 
-After a brief fill of project information select the option "Do you want to use DEK skeleton?"
+```
+? What is the name of the project? myapi
+? What is the author's name?
+? What is the project description? Another DEK project
+? What is the version of the project? 1.0.0
+? Directory for your project: /media/myapi
+? What is the repository of this project?
+? Do you want to use default skeleton? bootstrap-api
+? Do you want to install components for development mode? Yes
+? Do you want to install some frontend framework? none
+? Select plugins for your project: mongoose
+```
 
-## Devmode
+or
 
 ```bash
+$ git clone https://github.com/dekproject/bootstrap-api
+$ git clone https://github.com/dekproject/mongoose ./src/plugins
+$ npm i && npm i mongoose
 $ npm run dev
 ```
 
-If your error in the following error: Internal watch failed: ENOSPC
+### Access
 
-```bash
-$ sudo sysctl fs.inotify.max_user_watches=582222 && sudo sysctl -p
+API
+```
+http://localhost:5555/api
 ```
 
-## Build
-
-To build the ES6 files in the standard compatible with the NodeJS for production
-
-```bash
-$ npm run build
+Docs
 ```
-
-## Production
-
-To create a project production container, execute the following commands:
-
-```bash
-$ docker-compose build
-$ docker-compose up -d
+http://localhost:5555/api/docs
 ```

@@ -63,3 +63,6 @@ typings/
 
 # Build
 build/
+
+# DEK
+src/plugins
