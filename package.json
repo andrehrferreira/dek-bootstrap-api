@@ -1,6 +1,6 @@
 {
     "name": "bootstrap-api",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Basic API example in DEK",
     "author": "Andre Ferreira <andre@vigiadepreco.com.br>",
     "main": "src/index.js",
