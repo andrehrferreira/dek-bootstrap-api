@@ -34,8 +34,8 @@ or
 ```bash
 $ git clone https://github.com/dekproject/bootstrap-api
 $ git clone https://github.com/dekproject/mongoose ./src/plugins
-$ npm i && npm i mongoose
-$ npm run dev
+$ yarn && yarn add mongoose --save
+$ yarn dev
 ```
 
 ### Access
